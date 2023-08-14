@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(#2b1055, #7597);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #1c0522;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #7597;
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2b1055;
+  }
+/* Scrollbar */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+
+header .logo {
+    display: flex;
+    width: 25%;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header .logo p {
+    margin: 20px;
+    font-size: 1.5rem;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none;
+    margin-left: 15px;
+}
+
+header ul li a {
+    text-decoration: none;
+    padding: 6px 5px;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* two parents to one variable allows it so show the one currently active and also hovered over */
+header ul li a:hover, 
+header ul li a.active {
+    background: #fff;
+    color: #2b1055;
+    
+}
+
+section {
+    position: relative;
+    background-color: black; 
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(to top,#1c0522,transparent);
+    z-index: 1000;
+}
+
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+section img#telescope_front {
+    z-index: 10;    
+}
+
+section img#telescope_behind {
+    z-index: 10;
+}
+
+section img#green_hills {
+    z-index: 9;
+}
+
+#text {
+    position: absolute;
+    right: -40%;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    z-index: 9;
+}
+
+#btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #fff;
+    color: #2b1055;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(100px)
+}
+
+#btn:hover {
+    background: #2b1055;
+    color: #fff;
+    transition: ease-in-out 0.5s;
+}
+
+/* content styling */
+h2#title {
+    font-size: 5rem;
+}
+
+.sec {
+    position: relative;
+    padding: 100px;
+    background: #1c0522;
+    letter-spacing: 0.1em;
+}
+
+.sec h1 {
+    color: #fff;
+    padding: 0;
+    margin: 0;
+}
+
+.sec h2 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.sec p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.grid-container {
+    padding: 1.5rem;
+    justify-content: center;
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-row: auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+.grid-item {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+strong {
+    font-size: 40px;
+}
+
+.grid-item#image {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+p.caption {
+    outline: 1px solid white;
+    font-size: 12px;
+}
+
+.youtube {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+iframe {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.mars_city {
+    width: 100%;
+}
+
+.h1s {
+    text-align: center;
+}
+
+.next_page {
+    text-align: center;
+}
+/* content styling */
+
+/* Phone Styling */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 900px) 
+  and (-webkit-min-device-pixel-ratio: 3) {
+    .sec p {
+        font-size: 0.5em;
+        margin-bottom: 5px;
+    }
+
+    header ul li a {
+        padding: 6px 15px;
+        font-size: 15px;
+    }
+
+    iframe {
+        width: 850px;
+    }
+}
+/* Phone Styling */
